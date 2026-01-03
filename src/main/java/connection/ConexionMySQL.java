@@ -1,4 +1,4 @@
-// connection.ConexionMySQL.JAVA
+// connection.ConexionMySQL.java
 package connection;
 
 import java.sql.Connection;
