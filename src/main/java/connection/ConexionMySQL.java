@@ -20,6 +20,7 @@ public class ConexionMySQL {
 		// Cargar esa clase en la memoria RAM.
 		// La JVM ve el bloque static { ... } y lo ejecuta inmediatamente.
 		// Ese bloque llama a DriverManager.registerDriver(new Driver()).
+		// El driver se "auto-registra" en el DriverManager de Java
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		return DriverManager.getConnection(URL,USUARIO,PASSWORD);
