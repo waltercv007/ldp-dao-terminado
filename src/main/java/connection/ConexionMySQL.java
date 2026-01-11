@@ -16,7 +16,10 @@ public class ConexionMySQL {
 	// Metodos
 	
 	public static Connection obtenerConexion() throws ClassNotFoundException, SQLException {
-		
+		// Buscar el archivo .class dentro de tu librería mysql-connector-j-9.5.0.jar.
+		// Cargar esa clase en la memoria RAM.
+		// La JVM ve el bloque static { ... } y lo ejecuta inmediatamente.
+		// Ese bloque llama a DriverManager.registerDriver(new Driver()).
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		return DriverManager.getConnection(URL,USUARIO,PASSWORD);
